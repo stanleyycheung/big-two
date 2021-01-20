@@ -10,6 +10,9 @@ const playerSchema = new Schema({
     trim: true,
     minlength: 3
   },
+  host: {
+    type: Boolean,
+  }
 }, {
   timestamps: true,
 });
