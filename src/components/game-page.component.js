@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Exercise = props => (
+const Table = props => (
     <tr>
-        <td>{props.exercise.username}</td>
-        <td>{props.exercise.description}</td>
-        <td>{props.exercise.duration}</td>
-        <td>{props.exercise.date.substring(0, 10)}</td>
+        <td>{props.table.player1}</td>
+        <td>{props.table.player2}</td>
+        <td>{props.table.player3}</td>
+        <td>{props.table.player4}</td>
+        <td>{props.table.state}</td>
         <td>
-            <Link to={"/edit/" + props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteTable(props.exercise._id) }}>delete</a>
+            <Link to={"/edit/" + props.table._id}>edit</Link> | <a href="#" onClick={() => { props.deleteTable(props.table._id) }}>delete</a>
         </td>
     </tr>
 )
@@ -32,7 +33,7 @@ export default class GamePage extends Component {
 
     tableList() {
         return this.state.tables.map(currenttable => {
-            return <Exercise exercise={currenttable} deleteTable={this.deleteTable} key={currenttable._id} />;
+            return <Table table={currenttable} deleteTable={this.deleteTable} key={currenttable._id} />;
         })
     }
 

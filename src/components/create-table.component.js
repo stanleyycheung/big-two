@@ -47,19 +47,19 @@ export default class CreateTable extends Component {
 
 	onChangePlayer2(e) {
 		this.setState({
-			player1: e.target.value
+			player2: e.target.value
 		});
 	}
 
 	onChangePlayer3(e) {
 		this.setState({
-			player1: e.target.value
+			player3: e.target.value
 		});
 	}
 
 	onChangePlayer4(e) {
 		this.setState({
-			player1: e.target.value
+			player4: e.target.value
 		});
 	}
 
