@@ -21,8 +21,9 @@ export default class CreatePlayer extends Component {
         e.preventDefault();
         const newUser = {
             username: this.state.username,
+            host: false,
         };
-        axios.post('http://localhost:5000/users/add', newUser).then(res => console.log(res.data));
+        axios.post('http://localhost:5000/players/add', newUser).then(res => console.log(res.data));
         this.setState({
             username: ''
         })

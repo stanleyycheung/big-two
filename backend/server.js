@@ -18,8 +18,10 @@ connection.once('open', () => {
 })
 
 const playersRouter = require('./routes/players');
+const tablesRouter = require('./routes/tables');
 
-app.use('./players', playersRouter)
+app.use('/players', playersRouter)
+app.use('/tables', tablesRouter)
 
 app.listen(PORT, function () {
     console.log("Server is running on Port: " + PORT);

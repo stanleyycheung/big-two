@@ -26,7 +26,7 @@ export default class CreateTable extends Component {
 		}
 	}
 	componentDidMount() {
-		axios.get('http://localhost:5000/users/')
+		axios.get('http://localhost:5000/players/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
